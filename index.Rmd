@@ -5,82 +5,36 @@ output: html_document
 
 ### Introduction
 
-An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
+The dataset I use is the number of checkouts in Seattle Public Library during 2017-2023, and this dataset only included items that are checked out at least 10 times a month. I choose two books to analyze, Little Women and Jane Eyre. Both of these two books are about the feminine consciousness awakening. Feminism has been a hot topic during these years, and I would like to see if this will affect the number of book checkouts. Also, during the pandemic, it could be hard to go out. So I analyze the number of checkouts, especially for ebooks. 
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
-
-These will likely be calculated using your DPLYR skills, answering questions such as:
-
-- What is the average number of checkouts for each item?
-- What is the month or year with the most/least checkouts for a book that you're interested in?
-- What is the month or year with the most/least checkouts for ebooks?
-- How has the number of print book checkouts changed over time?
-
-Feel free to calculate and report values that you find relevant.
+The first value is the average checkout number for Little Women, which is 28.34884 times. I also calculated the average checkout number for Jane Eyre, which is around 17.83333 times. I want to compare these two numbers. Although both two books are about feminism, I think the movie of Little Women would positively influence the number of checkouts for the book. The third value is the year that has the least number of ebook checkouts for Little Women, which is 2023. I believe this is because the pandemic's effect is decreasing, and people are more willing to read paper books. Also, 2023 just begins, so the number would not be very large. The fourth value is the year with the most ebook checkouts for little women, which is 2020. I believe this is influenced by Covid-19. It is very dangerous for people to go outside, so they prefer to borrow some ebooks. The last value is the year with the most checkouts for Jane Eyre, 2022. It is probably because more and more people pay attention to feminism, and they want to find out some books about this part. 
 
 ### The Dataset
 
-- Who collected/published the data?  
-- What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
-- How was the data collected or generated?  
-- Why was the data collected?  
-- What, if any, ethical questions do you need to consider when working with this data?  
-- What are possible limitations or problems with this data?   (at least 200 words)
-
+The Seattle Public Library collected and published this data. The parameters include usage class, checkout type, material type, checkout year, checkout month, checkouts, title, ISBN, creator, subjects, publisher, and publication year. The data were collected monthly from April 2005, and the library's circulation system would automatically make a record of the checkouts for each item in the library. The data is collected because researchers can use this data to analyze people's reading habits and how those habits change over time. Also, there are many other implications for the data. For example, researchers can predict the items less likely to be checked out in the next six months. And those books can be repositioned to other libraries which need them more. For the problem part, before collecting the data, I think it is important to be transparent about how the data is being used and who has access to it. This includes providing clear explanations of any data collection methods, how the data will be used, and how it will be protected for people who visit the library. Of the limitations of the data, I think it could be hard to understand why people borrow different kinds of books. When doing data analysis about people's behavior, this information is very helpful. However, it is hard to find the reason behind people's actions as privacy problems exist.
 
 ### First Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The first chart that you will create and include will show the trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
+In the first chart, I want to compare the numbers of checkouts for different materials of Little Women at different times. I would like to do this because I want to see how the pandemic affects people’s reading habits. From the chart, we can clearly see that in 2020, the number of checkouts for audiobooks and ebooks is much larger than in any other period. And in that year, there is no record of the paper book. This is because, during the quarantine, people would feel bored but could not go outside. They might borrow some online books to spend their spare time. And the total number of checkouts is the largest in the year 2020. Moreover, the trend shows that the percentage of paper books is comparatively small in all materials. It might be because ebooks or audiobooks are easier to bring anywhere. 
 
 ``````{r, echo = FALSE, warning = FALSE, code = readLines("chart1_example.R")}
 ```
 
 ### Second Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The second chart that you will create and include will show another trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
+For the second chart, I would like to compare the numbers of total checkouts for Jane Eyre and Little Women at different times. The chart shows that the number of checkouts for Little Women increased a lot after the year 2019. It is because the movie of Little Women was on in the year 2019, and many famous actresses like Emma Watson showed up in this movie. This would attract many people to read this book. I got this conclusion because, before 2019, Jane Eyre’s number of total checks was bigger than Little Women’s. In 2022-2023, these two numbers of checkouts were almost equal. Moreover, for both books, the number of checkouts increased in 2020, which was the pandemic. I think the quarantine restricted people’s actions, and the had to stay home to read books.
 
 ``````{r, echo = FALSE, code = readLines("chart2_example.R")}
 ```
 
 ### Your Choice
 
-The last chart is up to you. It could be a line plot, scatter plot, histogram, bar plot, stacked bar plot, and more. Here are some requirements to help guide your design:
+For the last chart, I want to analyze the number of checkouts of different materials for Jane Eyre. Because from the first chart, we see the pattern of the number of checkouts of different materials for Little Women, I am interested in would the pattern be similar for Jane Eyre. From the chart, the pattern is a little bit different. The same trait is that during the 2020 pandemic, because of the quarantine, it could be hard for people to borrow paper books, so there are only records for ebooks and audiobooks on the charts. However, the number of checkouts for audiobooks was pretty high during 2019-2021, and it got the most number in 2019. Main people borrow this book in audiobook form. Moreover, unlike Little Women, Jane Eyre also has videodisc form in the library, although not many people are interested in this form.
 
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear legend title
 
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+``````{r, echo = FALSE, code = readLines("chart3.R")}
 ```
 
 
