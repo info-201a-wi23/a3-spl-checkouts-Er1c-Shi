@@ -17,5 +17,5 @@ Dt <- Dt %>% group_by(CheckoutYear, Booktitle) %>% summarise(Count = sum(Checkou
 library(ggplot2)
 ggplot(data = Dt) +
   geom_line(aes(x = CheckoutYear, y = Count, col = Booktitle)) + 
-  labs(x = 'Year of Checkouts', y = 'Number of Checkouts', title = "compare the numbers of checkouts") + 
+  labs(x = 'Year of Checkouts', y = 'Number of Checkouts', title = "Compare the Numbers of Checkouts") + 
   theme_bw()

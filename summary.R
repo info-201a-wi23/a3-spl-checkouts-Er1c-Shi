@@ -10,8 +10,6 @@ select_item <- check_out %>%
 avg_check_out <- select_item %>% 
   summarise(avg_checkout = mean(Checkouts))
 
-(avg_check_out)
-
 #year least checkout of ebook for Little Women
 
 book_num <- select_item %>% filter(MaterialType == "EBOOK") %>% 
@@ -25,6 +23,9 @@ year_least_ebook <- book_num[which(book_num$year_checkout == min(book_num$year_c
 year_most_ebook <- book_num[which(book_num$year_checkout == max(book_num$year_checkout)), 'CheckoutYear']
 
 #average check out for Jane Eyre
+select_item_2 <- check_out %>%
+  filter(str_detect(check_out$Title, "Jane Eyre"))
+select_item_2$'Booktitle' <- "Jane Eyre"
 
 avg_check_out_2 <- select_item_2 %>% 
   summarise(avg_checkout = mean(Checkouts))

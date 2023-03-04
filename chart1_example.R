@@ -14,6 +14,10 @@ material_checkout_little_women <- select_item %>% group_by(CheckoutYear, Materia
 
 library(ggplot2)
 ggplot(data = material_checkout_little_women) +
-  geom_bar(aes(x = CheckoutYear, y = year_checkouts, fill = MaterialType), stat = 'identity', position = position_dodge()) + 
-  labs(x = 'Year of Checkouts', y = 'Number of Checkouts', title = 'Checkouts of different mediums for Little Women') +
-  theme_bw()
+  geom_line(aes(x = CheckoutYear, 
+                y = year_checkouts, 
+                col = MaterialType)) + 
+  labs(x = 'Year of Checkouts', 
+       y = 'Number of Checkouts', 
+       title = 'Checkouts of Different Mediums for Little Women') +
+  theme_bw() 

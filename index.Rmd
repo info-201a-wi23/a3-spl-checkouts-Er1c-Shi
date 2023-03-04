@@ -8,8 +8,10 @@ output: html_document
 The dataset I use is the number of checkouts in Seattle Public Library during 2017-2023, and this dataset only included items that are checked out at least 10 times a month. I choose two books to analyze, Little Women and Jane Eyre. Both of these two books are about the feminine consciousness awakening. Feminism has been a hot topic during these years, and I would like to see if this will affect the number of book checkouts. Also, during the pandemic, it could be hard to go out. So I analyze the number of checkouts, especially for ebooks. 
 
 ### Summary Information
+```{r, echo = FALSE, message = F,warning = FALSE, code = readLines("summary.R")}
+```
 
-The first value is the average checkout number for Little Women, which is 28.34884 times. I also calculated the average checkout number for Jane Eyre, which is around 17.83333 times. I want to compare these two numbers. Although both two books are about feminism, I think the movie of Little Women would positively influence the number of checkouts for the book. The third value is the year that has the least number of ebook checkouts for Little Women, which is 2023. I believe this is because the pandemic's effect is decreasing, and people are more willing to read paper books. Also, 2023 just begins, so the number would not be very large. The fourth value is the year with the most ebook checkouts for little women, which is 2020. I believe this is influenced by Covid-19. It is very dangerous for people to go outside, so they prefer to borrow some ebooks. The last value is the year with the most checkouts for Jane Eyre, 2022. It is probably because more and more people pay attention to feminism, and they want to find out some books about this part. 
+The first value is the average checkout number for Little Women, which is `r avg_check_out` times. I also calculated the average checkout number for Jane Eyre, which is around `r avg_check_out_2` times. I want to compare these two numbers. Although both two books are about feminism, I think the movie of Little Women would positively influence the number of checkouts for the book. The third value is the year that has the least number of ebook checkouts for Little Women, which is `r year_least_ebook`. I believe this is because the pandemic's effect is decreasing, and people are more willing to read paper books. Also, `r year_least_ebook` just begins, so the number would not be very large. The fourth value is the year with the most ebook checkouts for little women, which is `r year_most_ebook`. I believe this is influenced by Covid-19. It is very dangerous for people to go outside, so they prefer to borrow some ebooks. The last value is the year with the most checkouts for Jane Eyre, `r year_most_book`. It is probably because more and more people pay attention to feminism, and they want to find out some books about this part. 
 
 ### The Dataset
 
@@ -19,14 +21,14 @@ The Seattle Public Library collected and published this data. The parameters inc
 
 In the first chart, I want to compare the numbers of checkouts for different materials of Little Women at different times. I would like to do this because I want to see how the pandemic affects people’s reading habits. From the chart, we can clearly see that in 2020, the number of checkouts for audiobooks and ebooks is much larger than in any other period. And in that year, there is no record of the paper book. This is because, during the quarantine, people would feel bored but could not go outside. They might borrow some online books to spend their spare time. And the total number of checkouts is the largest in the year 2020. Moreover, the trend shows that the percentage of paper books is comparatively small in all materials. It might be because ebooks or audiobooks are easier to bring anywhere. 
 
-``````{r, echo = FALSE, warning = FALSE, code = readLines("chart1_example.R")}
+``````{r, echo = FALSE, message = F,warning = FALSE, code = readLines("chart1_example.R")}
 ```
 
 ### Second Trends Over Time Chart
 
 For the second chart, I would like to compare the numbers of total checkouts for Jane Eyre and Little Women at different times. The chart shows that the number of checkouts for Little Women increased a lot after the year 2019. It is because the movie of Little Women was on in the year 2019, and many famous actresses like Emma Watson showed up in this movie. This would attract many people to read this book. I got this conclusion because, before 2019, Jane Eyre’s number of total checks was bigger than Little Women’s. In 2022-2023, these two numbers of checkouts were almost equal. Moreover, for both books, the number of checkouts increased in 2020, which was the pandemic. I think the quarantine restricted people’s actions, and the had to stay home to read books.
 
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+``````{r, echo = FALSE, message = F,warning = FALSE, code = readLines("chart2_example.R")}
 ```
 
 ### Your Choice
@@ -34,7 +36,7 @@ For the second chart, I would like to compare the numbers of total checkouts for
 For the last chart, I want to analyze the number of checkouts of different materials for Jane Eyre. Because from the first chart, we see the pattern of the number of checkouts of different materials for Little Women, I am interested in would the pattern be similar for Jane Eyre. From the chart, the pattern is a little bit different. The same trait is that during the 2020 pandemic, because of the quarantine, it could be hard for people to borrow paper books, so there are only records for ebooks and audiobooks on the charts. However, the number of checkouts for audiobooks was pretty high during 2019-2021, and it got the most number in 2019. Main people borrow this book in audiobook form. Moreover, unlike Little Women, Jane Eyre also has videodisc form in the library, although not many people are interested in this form.
 
 
-``````{r, echo = FALSE, code = readLines("chart3.R")}
+``````{r, echo = FALSE, message = F,warning = FALSE, code = readLines("chart3.R")}
 ```
 
 
